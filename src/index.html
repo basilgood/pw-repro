@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        html {
+            height:100%;
+            box-sizing: border-box;
+        }
+        body {
+            height:100%;
+            background-color: #fff;
+            color: #333;
+            font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        * {
+            box-sizing: inherit;
+        }
+        section {
+            height: 100%
+        }
+        .wrapper {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        #parentSelector {
+            background-color: rgb(75, 70, 74);
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+    <script type = "text/javascript">
+      function myFunction() {
+
+        const checkBox = document.getElementById("myCheck");
+
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true) {
+          parentSelector.style.display = "block";
+        } else {
+          parentSelector.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section>
+      <div class="wrapper">
+        Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+        <footer id="parentSelector" style="display:none">
+          <p style="display:contents">Checkbox is CHECKED!</p>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>
