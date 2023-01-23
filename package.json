@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.17.1",
+    "@playwright/test": "^1.29.2",
     "http-server": "^14.0.0",
     "parcel-bundler": "^1.12.5",
     "rimraf": "^3.0.2",
