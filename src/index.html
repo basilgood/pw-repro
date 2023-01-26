@@ -1,54 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css" media="all">
+      .color-sample {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #e1e2e5;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Test</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    html {
-      height: 100%;
-      box-sizing: border-box;
-    }
-
-    body {
-      height: 100%;
-      background-color: #fff;
-      color: #333;
-      font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
-      padding: 0;
-      margin: 0;
-    }
-
-    * {
-      box-sizing: inherit;
-    }
-
-    section {
-      height: 100%
-    }
-
-    .wrapper {
-      min-height: 100%;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-    }
-
-    #parentSelector {
-      background-color: rgb(75, 70, 74);
-      color: #fff;
-      padding: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <section>
-    <div class="wrapper">
-      <label for="input" part="label">Color</label>
-      <input id="input" part="input" type="color" placeholder=" ">
-    </div>
-  </section>
-</body>
-
+  <body>
+    <label for="input" part="label">Color</label>
+    <input id="input" part="input" type="color" placeholder=" " />
+    <div id="output"></div>
+    <script type="text/javascript">
+      // document.getElementById('input').addEventListener('input', ev => console.log(ev, ev.target.value))
+      document
+        .getElementById('input')
+        .addEventListener(
+          'input',
+          (ev) =>
+            (document.getElementById('output').textContent = ev.target.value)
+        );
+    </script>
+  </body>
 </html>
